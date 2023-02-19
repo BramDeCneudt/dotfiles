@@ -1,0 +1,16 @@
+# all functions go here
+
+function branch {
+# git branch | grep -v "^*" | tr -d " \t\n\r" for just git branch
+	mapfile -t my_array < <( git branch -a | grep "remotes/origin" | grep -v ">" | sed "s:remotes/origin/::" )
+
+	index=0
+	for line in "${my_array[@]}"
+	do
+	   echo "$index: $line"
+	   index=$((index+1))
+	done
+	read -p 'choose index: ' index
+	echo "choosing branch ${my_array[$index]}"
+	git checkout ${my_array[$index]}
+}

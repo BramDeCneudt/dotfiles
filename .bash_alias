@@ -1,0 +1,40 @@
+#global alias
+alias test='echo test'
+alias reload='source ~/.bashrc && echo "reloaded bashrc, enjoy!"'
+alias back='cd ../'
+
+#git alias
+alias gs='git status'
+alias gp='git pull'
+alias gpp='git pull && git push'
+
+alias gd='git diff'
+alias gdh='git diff .'
+alias gdc='git diff --cached'
+
+alias gac='git add --all . && git commit'
+alias gc='git clone'
+alias gl='git log'
+
+alias gm='git checkout master'
+alias gcd='git checkout develop'
+
+
+#setting alias
+alias setbashrc='vim ~/.bashrc'
+alias setalias='vim ~/.bash_alias'
+alias setfunction='vim ~/.bash_function'
+
+alias setgitignore='vim .gitignore'
+
+#project alias
+alias base="cd ~/base"
+alias staging="cd ~/staging"
+alias tasks="vim ~/tasks"
+
+#maven alias
+alias mc="mvn clean"
+alias mci="mvn clean install"
+alias mcist="mvn clean install -DskipTests"
+alias mcise="mvn clean install -Denforcer.skip=true"
+alias mcistse="mvn clean install -DskipTests -Denforcer.skip=true"
