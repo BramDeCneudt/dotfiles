@@ -70,6 +70,8 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 [ -f "/home/bram/.ghcup/env" ] && source "/home/bram/.ghcup/env" # ghcup-env
 
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
